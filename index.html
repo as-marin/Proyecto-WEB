@@ -5,14 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pag</title>
     <!-- Latest compiled and minified CSS -->
-<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/bootstrap.min.css" rel="stylesheet"> 
 
 <!-- Latest compiled JavaScript -->
 <script src="js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1>ejemplo</h1>
-<p>asd</p>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam mollitia soluta neque aut totam dignissimos blanditiis voluptas sapiente repellendus iure suscipit unde, alias exercitationem magni eligendi vitae! Consequuntur, totam iste.</p>
+    <div class="container border p-5">
+        <h1>ejemplo</h1>
+        <p>asd</p>
+        <p>Lorem ipsum dolor sit  iure suscipit unde, alias exercitationem magni eligendi vitae! Consequuntur, totam iste.</p>
+
+        <!-- Control the column width, and how they should appear on different devices -->
+<div class="row border">
+    <div class="col-*-* border"></div>
+    <div class="col-*-*"></div>
+  </div>
+  <div class="row border">
+    <div class="col-*-*border"></div>
+    <div class="col-*-*border"></div>
+    <div class="col-*-*border"></div>
+  </div>
+  
+  <!-- Or let Bootstrap automatically handle the layout -->
+  <div class="row border">
+    <div class="col-sm-4 bg-primary"><p>asd</p></div>
+    <div class="col-sm-4 bg-success "><p>asd</p></div>
+    <div class="col-sm-4 border"><p>asd</p></div>
+  </div>
+  <div class="row border">
+    <div class="col-sm-4 border"><p>asd</p></div>
+    <div class="col-sm-4 border "><p>asd</p></div>
+    <div class="col-sm-4 border"><p>asd</p></div>
+  </div>
+    </div>
 </body>
 </html>
