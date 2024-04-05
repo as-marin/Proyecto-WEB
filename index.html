@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pag</title>
+    <title>Dar Jugo</title>
+    <link rel=" icon" href="img/logo1.png" type="image/x-icon">
     <!-- Latest compiled and minified CSS -->
 <link href="css/bootstrap.min.css" rel="stylesheet"> 
 
@@ -12,33 +13,43 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container border p-5">
-        <h1>ejemplo</h1>
-        <p>asd</p>
-        <p>Lorem ipsum dolor sit  iure suscipit unde, alias exercitationem magni eligendi vitae! Consequuntur, totam iste.</p>
-
-        <!-- Control the column width, and how they should appear on different devices -->
-<div class="row border">
-    <div class="col-*-* border"></div>
-    <div class="col-*-*"></div>
-  </div>
-  <div class="row border">
-    <div class="col-*-*border"></div>
-    <div class="col-*-*border"></div>
-    <div class="col-*-*border"></div>
-  </div>
-  
-  <!-- Or let Bootstrap automatically handle the layout -->
-  <div class="row border">
-    <div class="col-sm-4 bg-primary"><p>asd</p></div>
-    <div class="col-sm-4 bg-success "><p>asd</p></div>
-    <div class="col-sm-4 border"><p>asd</p></div>
-  </div>
-  <div class="row border">
-    <div class="col-sm-4 border"><p>asd</p></div>
-    <div class="col-sm-4 border "><p>asd</p></div>
-    <div class="col-sm-4 border"><p>asd</p></div>
-  </div>
+<!-- barra de navegacion 1 -->
+<nav class="navbar navbar-expand-md bg-dark">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler" aria-controls="navbar-toggler" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-toggler">
+      <a class="navbar-brand" href="#"><img src="img/logo1.png" alt="logo1" width="60"></a>
+      <ul class="navbar-nav d-flex justify-content-center align-items-center">
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
     </div>
+  </div>
+</nav>
+<!-- navbar 2 -->
+<nav class="navbar navbar-expand-md bg-warning">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler" aria-controls="navbar-toggler" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-toggler">
+      <ul class="navbar-nav d-flex justify-content-center align-items-center">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Destilados</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Licores</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link">Cervezas</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 </body>
 </html>
