@@ -24,6 +24,19 @@
     }
 </style>
 
+<style>
+    /* Estilos personalizados para la alerta */
+    .custom-alert {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 60%; /* Ajusta el ancho según sea necesario */
+        max-width: 400px; /* Ancho máximo */
+        text-align: center;
+        font-size: 1.5em; /* Tamaño de fuente */
+    }
+</style>
 
 
 </head>
@@ -94,8 +107,12 @@
                             <p class="mt-0">3600</p>
                         </div>
                     </div>
-                    <div class="row justify-content-center mt-3">
-                        <a href="index.html" id="btn-pago" class="btn btn-warning btn-sm">Pagar</a>
+                
+                    <div class="container mt-3">
+                        <div class="row justify-content-center">
+                            <a href="index.html" id="btn-pago" class="btn btn-warning btn-sm">Pagar</a>
+                        </div>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -103,6 +120,24 @@
     </div>
     
 
+    <script>
+        document.getElementById('btn-pago').addEventListener('click', function(event) {
+            event.preventDefault(); // Evitar que el enlace se active
+            
+            // Crear la alerta
+            var alerta = document.createElement('div');
+            alerta.classList.add('alert', 'alert-success', 'custom-alert'); // Se agrega la clase 'custom-alert'
+            alerta.textContent = 'Pago exitoso';
+        
+            // Insertar la alerta en el body
+            document.body.appendChild(alerta);
+        
+            // Esperar 3 segundos antes de redireccionar
+            setTimeout(function() {
+                window.location.href = document.getElementById('btn-pago').href;
+            }, 1000);
+        });
+        </script>
 
     
 </body>
