@@ -1,9 +1,18 @@
 
 
 .nav-link:hover{
-color: black;
+color: #4D3EAA;
+transition: color 0.3s ease; 
 }
 
+.nav-link.user {
+    color: white; 
+    transition: color 0.3s ease; 
+  }
+
+  .nav-link.user:hover {
+    color: #FFC108; 
+  }
 
 .main h1 {
     font-size: 4rem;
@@ -33,5 +42,10 @@ color: black;
     background-color: #343a40;
 }
 
+h1 {
+    font-family: 'Arial', sans-serif; /* Cambia a una fuente más dinámica */
+    color: #FFD700; /* Color vibrante */
+    text-shadow: 2px 2px #000; /* Sombra para dar profundidad */
+  }
 
-
+  
