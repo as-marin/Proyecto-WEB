@@ -48,4 +48,6 @@ h1 {
     text-shadow: 2px 2px #000; /* Sombra para dar profundidad */
   }
 
-  
+body {
+  background-color: #000;
+}
