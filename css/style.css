@@ -1,30 +1,10 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
 
-.btn0{
-    height: 40px;
-    width: 40%;
-    outline: yellow;
-    border: none;
-    background-color: transparent;
-    color: white;
-    font-weight: 700;
-    border-radius: 5px;
-}
+
 .nav-link:hover{
 color: black;
 }
 
-.main{
-    background: url(../img/logo1.png);
-    background-size: cover;
-    height: 100vh;
-    width: 100%;
-    background-position: 50% 50%;
-}
+
 .main h1 {
     font-size: 4rem;
     font-weight: 700;
@@ -39,19 +19,19 @@ color: black;
 }
 
 .navbar.bg-dark {
-    position: sticky; /* Hace que la barra de navegación 1 tenga un posicionamiento pegajoso */
-    top: 0; /* Se mantiene pegada en la parte superior de la ventana */
-    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    position: sticky; 
+    top: 0; 
+    z-index: 1000; 
   }
   
-  /* Estilos para la barra de navegación 2 */
-  .navbar.bg-warning {
-    position: sticky; /* Hace que la barra de navegación 2 tenga un posicionamiento pegajoso */
-    top: 86px; /* Se mantiene pegada debajo de la barra de navegación 1 */
-    z-index: 999; /* Asegura que esté por encima de otros elementos */
+  .navbar.bg-warning  {
+    position: sticky; 
+    top: 86px; 
+    z-index: 999; 
   }
 .card-body{
     background-color: #343a40;
 }
+
 
 
