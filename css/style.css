@@ -43,11 +43,33 @@ transition: color 0.3s ease;
 }
 
 h1 {
-    font-family: 'Arial', sans-serif; /* Cambia a una fuente más dinámica */
-    color: #FFD700; /* Color vibrante */
-    text-shadow: 2px 2px #000; /* Sombra para dar profundidad */
+    font-family: 'Arial', sans-serif; 
+    color: #FFD700; 
+    text-shadow: 2px 2px #000; 
   }
 
-body {
-  background-color: #000;
+ 
+  /* Define tu propio color gris personalizado */
+  .bg-custom-gray {
+    background-color: #343a40; /* Cambia el valor HEX según el tono de gris deseado */
+  }
+
+
+
+.bg-custom-gray {
+  margin: auto; /* Centra la figura gris horizontalmente */
+  max-width: 800px; /* Establece el ancho máximo para mantener la figura gris centrada */
+}
+
+
+/* Estilos personalizados para la alerta */
+.custom-alert {
+  position: fixed;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%; /* Ajusta el ancho según sea necesario */
+  max-width: 400px; /* Ancho máximo */
+  text-align: center;
+  font-size: 1.5em; /* Tamaño de fuente */
 }
