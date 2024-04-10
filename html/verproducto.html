@@ -105,21 +105,36 @@
                                 <h6>- Un elixir</h6>
                                 <h6>- Cura depresion</h6>
                                 <h6>- Te hace macho</h6>
-                                <button type="button" class="btn btn-warning mt-3">Agregar</button>
+                                <button type="button" id="btn-registro"  class="btn btn-warning mt-3 ">Agregar</button>
 
                                 
                             </div>
                         </div>
                     </div>
-                
-
-
                 </div>
             </div>
         </div>
     </div>
 
-
+    <script>
+        document.getElementById('btn-registro').addEventListener('click', function(event) {
+            event.preventDefault(); // Evitar que el enlace se active
+            
+            // Crear la alerta
+            var alerta = document.createElement('div');
+            alerta.classList.add('alert', 'alert-success', 'custom-alert'); // Se agrega la clase 'custom-alert'
+            alerta.textContent = 'Se agregó con éxito';
+        
+            // Insertar la alerta en el body
+            document.body.appendChild(alerta);
+        
+            // Esperar 1 segundo antes de eliminar la alerta
+            setTimeout(function() {
+                alerta.remove();
+            }, 1000);
+        });
+    </script>
+    
     
 </body>
 </html>
