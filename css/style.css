@@ -1,5 +1,7 @@
 
 
+
+
 .nav-link:hover{
 color: #4D3EAA;
 transition: color 0.3s ease; 
@@ -13,6 +15,7 @@ transition: color 0.3s ease;
   .nav-link.user:hover {
     color: #FFC108; 
   }
+
 
 .main h1 {
     font-size: 4rem;
@@ -72,4 +75,11 @@ h1 {
   max-width: 400px; /* Ancho máximo */
   text-align: center;
   font-size: 1.5em; /* Tamaño de fuente */
+}
+
+
+.custom-figure {
+  width: 100%; /* Ajusta el ancho según tus necesidades */
+  margin: 0 auto; /* Centra horizontalmente */
+  /* Otros estilos personalizados aquí */
 }
