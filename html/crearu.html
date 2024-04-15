@@ -12,82 +12,91 @@
 
 
 </head>
-<body>
+<body style="background-color:    #e0d8c9">
 
-    <nav class="navbar navbar-expand-md bg-dark">
-        <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler" aria-controls="navbar-toggler" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+  <nav style="background-color: rgb(30, 30, 30);" class="navbar navbar-expand-md">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler" aria-controls="navbar-toggler" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+  
+      <a class="navbar-brand" href="index.html"><img src="../img/log3.png" alt="logo2" width="70"></a>
+     
+      <div class="collapse navbar-collapse justify-content-between " id="navbar-toggler">
+  
+  
+        <form class="d-flex" role="search">
+          <input class="form-control custom-bg" type="search" style="width: 310px;" placeholder="¿Qué buscas?" aria-label="Search">
+          <button class="btn btn-light" type="submit" style="position: relative; left: -10px;">
+              <img src="../img/lupa.png" alt="Buscar">
           </button>
-          <div class="collapse navbar-collapse justify-content-between" id="navbar-toggler">
-            <a class="navbar-brand" href="index.html"><img src="../img/logo2.png" alt="logo2" width="60"></a>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="¿Que buscas?" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Buscar</button>
-            </form>
-
-            
+      </form>
       
-
-
-            <ul class="navbar-nav" style="display: flex; align-items: center;">
+      
+      
+      
+      
+        
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbar-toggler">
+            <ul class="navbar-nav mr-auto justify-content-start align-items-center">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#" style="color: white;">Destilados</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="licores.html" style="color: white;">Licores</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cervezas.html" style="color: white;">Cervezas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="whiskies.html" style="color: white;">Whiskies</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="vinos.html" style="color: white;">Vinos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="espumantes.html" style="color: white;">Espumantes</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+  
+        <ul class="navbar-nav" style="display: flex; align-items: center;">
+          <li class="nav-item">
+              <a class="nav-link user" href="user.html" style="display: inline-block; padding: 0.5rem; border: 1px solid transparent; border-radius: 50%; margin-right: 10px;">
+                  <img src="../img/dyler.png" alt="" style="height: 2rem; filter: brightness(0) invert(1);"> <!-- Agregado estilo para cambiar el color a blanco -->
+              </a>
+          </li>
+      
+          <ul class="navbar-nav" style="display: flex; align-items: center;">
               <li class="nav-item">
-                  <a class="nav-link user" href="user.html" style="display: inline-block; padding: 0.5rem; border: 1px solid transparent; border-radius: 50%; background-color: #f8f9fa; margin-right: 10px;">
-                      <img src="../img/dyler.png" alt="" style="height: 2rem;">
+                  <a class="nav-link user" href="carrito.html" style="display: inline-block; padding: 0.5rem; border: 1px solid transparent; border-radius: 50%; margin-right: 10px;">
+                      <img src="../img/carrito.png" alt="" style="height: 2rem; filter: brightness(0) invert(1);"> <!-- Agregado estilo para cambiar el color a blanco -->
                   </a>
               </li>
-
-            <ul class="navbar-nav" style="display: flex; align-items: center;">
-                <li class="nav-item">
-                    <a class="nav-link user" href="carrito.html" style="display: inline-block; padding: 0.5rem; border: 1px solid transparent; border-radius: 50%; background-color: #f8f9fa; margin-right: 10px;">
-                        <img src="../img/carrito.png" alt="" style="height: 2rem;">
-                    </a>
-                </li>
-            
-                <li class="nav-item">
-                    <a class="nav-link user" href="iniciarsesion.html">Ingresar</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link user" href="crearu.html">Crear Cuenta</a>
-                </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-      <!-- navbar 2 -->
-      <nav class="navbar navbar-expand-md bg-warning ">
-        <div class="container-fluid">
-          <div class="collapse navbar-collapse" id="navbar-toggler">
-            <ul class="navbar-nav m-auto justify-content-center align-items-center ">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="destilados.html">Destilados</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="licores.html">Licores</a>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link" href="cervezas.html">Cervezas</a>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link" href="whiskies.html">Whiskies</a>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link" href="vinos.html">Vinos</a>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link" href="espumantes.html">Espumantes</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-
+      </ul>
+      
+      
+      
+          <li class="nav-item">
+              <a class="nav-link user" href="iniciarsesion.html">Ingresar</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link user" href="crearu.html">Crear Cuenta</a>
+          </li>
+      </ul>
+      </div>
+    </div>
+  </nav>
      
     <div class="container mt-5 pb-5">
         <div class="row justify-content-center">
             <div class="col-md-12">
-                <div class="rounded bg-custom-gray p-5 text-center">
-                    <h1 class="mt-0">Crear usuario</h1>
+                <div class="rounded bg-dark p-5 text-center">
+                    <h1 style="color: aliceblue;" class="mt-0">Crear usuario</h1>
                     <div class="row justify-content-center">
                         <div class="col-sm-6">
                             <div class="form-group mb-3">
@@ -117,7 +126,7 @@
                     </div>
                     <div class="row justify-content-center mt-4">
                         <div class="col-sm-8">
-                            <a href="../html/index.html" id="btn-registro" class="btn btn-warning btn-lg btn-block">Registrarse</a>
+                            <a href="../html/index.html" id="btn-registro" class="btn btn-light btn-lg btn-block">Registrarse</a>
                         </div>
                     </div>
                 </div>
@@ -125,6 +134,64 @@
         </div>
     </div>
     
+
+<!-- barra pc -->
+<div class="container-fluid bg-dark text-light py-3 fixed-bottom d-none d-md-block">
+  <div class="row">
+    <div class="col-md-2 col-sm-3">
+      <!-- Logotipos y Certificado SSL -->
+      <img  style="height: 100px;" src="../img/log3.png" alt="Logo" class="mb-2"/>
+    </div>
+    <div class="col-md-3 col-sm-4">
+      <!-- Información de la Mesa de Ayuda -->
+      <h5>MESA DE AYUDA</h5>
+      <p>Horario de atención: Lunes a Viernes de 09:00 a 18:00 hrs.</p>
+      <!-- Otros detalles de contacto -->
+    </div>
+    <div class="col-md-3 col-sm-4">
+      <h5>POLITICAS</h5>
+      <p>ninguna porque somos bacanes jajaja xd.</p>
+      <!-- Políticas y Condiciones -->
+      <!-- Detalles sobre devoluciones, términos, etc. -->
+    </div>
+    <div class="col-md-3 col-sm-4">
+      <h5>REDES SOCIALES</h5>
+      <p>ninguna porque somos bacanes jajaja xd.</p>
+      <!-- Iconos de redes sociales -->
+      <!-- Agrega los íconos de tus redes sociales aquí -->
+    </div>
+  </div>
+</div>
+
+<!-- barra celular -->
+<div class="container-fluid bg-dark text-light py-2  d-md-none ">
+  <div class="row">
+    <div class="col-md-2 col-sm-3">
+      <!-- Logotipos y Certificado SSL -->
+      <img src="../img/log3.png" alt="Logo" class="mb-2"/>
+    </div>
+    <div class="col-md-3 col-sm-4">
+      <!-- Información de la Mesa de Ayuda -->
+      <h5>MESA DE AYUDA</h5>
+      <p>Horario de atención: Lunes a Viernes de 09:00 a 18:00 hrs.</p>
+      <!-- Otros detalles de contacto -->
+    </div>
+    <div class="col-md-3 col-sm-4">
+      <h5>POLITICAS</h5>
+      <p>ninguna porque somos bacanes jajaja xd.</p>
+      <!-- Políticas y Condiciones -->
+      <!-- Detalles sobre devoluciones, términos, etc. -->
+    </div>
+    <div class="col-md-3 col-sm-4">
+      <h5>REDES SOCIALES</h5>
+      <p>ninguna porque somos bacanes jajaja xd.</p>
+      <!-- Iconos de redes sociales -->
+      <!-- Agrega los íconos de tus redes sociales aquí -->
+    </div>
+  </div>
+</div>
+
+
 
     <script>
         document.getElementById('btn-registro').addEventListener('click', function(event) {
