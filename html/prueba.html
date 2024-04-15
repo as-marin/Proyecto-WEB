@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+
+          margin: 0; /* Elimina el margen alrededor del cuerpo para que la barra de navegación use toda la parte superior de la página */
+        }
+        
+        .navbar {
+          background-color: #ffc107;
+          overflow: hidden;
+          height: 80px; /* Aumenta este valor para hacer más grande el fondo */
+        }
+        
+        .navbar a, .navbar input {
+          float: left;
+          display: block;
+          color: black; /* Cambia el color del texto a negro */
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+        
+        .navbar img {
+          vertical-align: middle;
+          height: 52px; /* Ajusta este valor para cambiar el tamaño de las imágenes */
+        }
+        
+        .navbar a:hover {
+          background-color: #ddd;
+          color: black;
+        }
+        
+        .navbar .account {
+          float: right;
+        }
+        
+        .navbar .logo {
+          float: left;
+        }
+
+        .search-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.search-input {
+  padding: 10px;
+  font-size: 17px;
+  border: none;
+  background: #f1f1f1;
+}
+
+.search-button {
+  padding: 10px;
+  font-size: 17px;
+  border: none;
+  background: #0b7dda;
+  color: white;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background: #0b60a2;
+}
+
+        </style>
+
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="#cuenta" class="logo"><img src="../img/logo_chico.png" alt="Logo"></a>
+        <a href="#categorias">Categorías</a>
+        <a href="#ofertas">Ofertas</a>
+
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="¿Qué buscas?">
+            <button type="submit" class="search-button">Buscar</button>
+          </div>
+          
+
+
+        <a href="#cuenta" class="account"><img src="../img/dyler.png" alt="Dely"></a>
+       
+        <a href="#carrito" class="account"><img src="../img/carrito.png" alt="Carrito"></a>
+
+        
+        <a href="#cuenta" class="account"><img src="../img/user.jpg" alt="Ingresar Tu cuenta"></a>
+        
+      </div>
+</body>
+</html>
