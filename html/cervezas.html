@@ -4,45 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dar Jugo</title>
-    <link rel=" icon" href="../img/logo2.png" type="image/x-icon">
+    <link rel=" icon" href="../img/barra.png" type="image/x-icon">
     <!-- Latest compiled and minified CSS -->
 <link href="../css/bootstrap.min.css" rel="stylesheet"> 
 
 <!-- Latest compiled JavaScript -->
 <script src="../js/bootstrap.bundle.min.js"></script>
 <link rel="stylesheet" href="../css/style.css">
+
+
+
+
+
 </head>
-<body>
+<body style="background-color:    #e0d8c9">
 <!-- navbar 1 -->
-<nav class="navbar navbar-expand-md bg-dark">
+<nav style="background-color: rgb(30, 30, 30);" class="navbar navbar-expand-md">
   <div class="container-fluid">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler" aria-controls="navbar-toggler" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse justify-content-between" id="navbar-toggler">
-      <a class="navbar-brand" href="index.html"><img src="../img/logo2.png" alt="logo2" width="60"></a>
+
+
+    <a class="navbar-brand" href="index.html"><img src="../img/log3.png" alt="logo2" width="70"></a>
+   
+    <div class="collapse navbar-collapse justify-content-between " id="navbar-toggler">
+
+
       <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="¿Que buscas?" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Buscar</button>
-      </form>
-
+        <input class="form-control custom-bg" type="search" style="width: 310px;" placeholder="¿Qué buscas?" aria-label="Search">
+        <button class="btn btn-light" type="submit" style="position: relative; left: -10px;">
+            <img src="../img/lupa.png" alt="Buscar">
+        </button>
+    </form>
+    
+    
+    
+    
+    
       
- 
-
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="navbar-toggler">
+          <ul class="navbar-nav mr-auto justify-content-start align-items-center">
+              <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#" style="color: white;">Destilados</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="licores.html" style="color: white;">Licores</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="cervezas.html" style="color: white;">Cervezas</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="whiskies.html" style="color: white;">Whiskies</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="vinos.html" style="color: white;">Vinos</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="espumantes.html" style="color: white;">Espumantes</a>
+              </li>
+          </ul>
+      </div>
+  </div>
+  
 
       <ul class="navbar-nav" style="display: flex; align-items: center;">
         <li class="nav-item">
-            <a class="nav-link user" href="user.html" style="display: inline-block; padding: 0.5rem; border: 1px solid transparent; border-radius: 50%; background-color: #f8f9fa; margin-right: 10px;">
-                <img src="../img/dyler.png" alt="" style="height: 2rem;">
+            <a class="nav-link user" href="user.html" style="display: inline-block; padding: 0.5rem; border: 1px solid transparent; border-radius: 50%; margin-right: 10px;">
+                <img src="../img/dyler.png" alt="" style="height: 2rem; filter: brightness(0) invert(1);"> <!-- Agregado estilo para cambiar el color a blanco -->
             </a>
         </li>
-
-      <ul class="navbar-nav" style="display: flex; align-items: center;">
-        <li class="nav-item">
-            <a class="nav-link user" href="carrito.html" style="display: inline-block; padding: 0.5rem; border: 1px solid transparent; border-radius: 50%; background-color: #f8f9fa; margin-right: 10px;">
-                <img src="../img/carrito.png" alt="" style="height: 2rem;">
-            </a>
-        </li>
+    
+        <ul class="navbar-nav" style="display: flex; align-items: center;">
+            <li class="nav-item">
+                <a class="nav-link user" href="carrito.html" style="display: inline-block; padding: 0.5rem; border: 1px solid transparent; border-radius: 50%; margin-right: 10px;">
+                    <img src="../img/carrito.png" alt="" style="height: 2rem; filter: brightness(0) invert(1);"> <!-- Agregado estilo para cambiar el color a blanco -->
+                </a>
+            </li>
+    </ul>
+    
+    
     
         <li class="nav-item">
             <a class="nav-link user" href="iniciarsesion.html">Ingresar</a>
@@ -55,78 +97,129 @@
   </div>
 </nav>
 <!-- navbar 2 -->
-<nav class="navbar navbar-expand-md bg-warning ">
-  <div class="container-fluid">
-    <div class="collapse navbar-collapse" id="navbar-toggler">
-      <ul class="navbar-nav m-auto justify-content-center align-items-center ">
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="#">Destilados</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="licores.html">Licores</a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="cervezas.html">Cervezas</a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="whiskies.html">Whiskies</a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="vinos.html">Vinos</a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="espumantes.html">Espumantes</a>
-          </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+
 <!-- productos -->
-<section class="product " >
+<section class="product">
   <div class="container">
-    <div class="row py-5 ">
-      <div class="col-lg-5 m-auto text-center" >
-        <h1>Lo más vendido</h1>
-        <h6 style="color: white;">Productos más comprado </h6>
+    <div class="row py-4">
+      <div class="col-lg-5 m-auto text-center">
+        <h1 style="font-size: 60px;">Lo más vendido</h1>
+        <h6 style="color: #696969; font-size: 20px;">Productos más comprados</h6>
+        <button>Filtro</button>  <button>Filtro</button>  <button>Filtro</button>  <button>Filtro</button> <button>Filtro</button>
       </div>
     </div>
-    <div class="row"  >
-      <div class="col-lg-3 text-center" >
-        <div class="card border-0 mb-2" >
-          <div class="card-body">
-            <a href="../html/verproducto.html"><img src="../img/caiman.png" class="img-fluid" alt="caiman"></a> 
-          </div>
-        </div>
-        <p>Caiman</p>
-        <p>$9.990</p>
-      </div>
+    <div class="row ">
       <div class="col-lg-3 text-center">
         <div class="card border-0 mb-2">
           <div class="card-body">
             <a href="../html/verproducto.html"><img src="../img/caiman.png" class="img-fluid" alt="caiman"></a> 
           </div>
         </div>
-        <p>Caiman</p>
-        <p>$9.990</p>
-    </div>
-    <div class="col-lg-3 text-center">
-      <div class="card border-0 mb-2">
-        <div class="card-body">
-          <a href="../html/verproducto.html"><img src="../img/caiman.png" class="img-fluid" alt="caiman"></a> 
+        <h3 style="color: #000000;">$9.990</h3>
+        <h5 style="color: #000000;">1 LT Caiman</h5>
+      </div>
+      
+      <!-- Replicación del producto -->
+      
+      <div class="col-lg-3 text-center">
+        <div class="card border-0 mb-2">
+          <div class="card-body">
+            <a href="../html/verproducto.html"><img src="../img/caiman.png" class="img-fluid" alt="caiman"></a> 
+          </div>
         </div>
+        <h3 style="color: #000000;">$9.990</h3>
+        <h5 style="color: #000000;">1 LT Caiman</h5>
       </div>
-      <p>Caiman</p>
-      <p>$9.990</p>
-  </div>
-  <div class="col-lg-3 text-center">
-    <div class="card border-0 mb-2">
-      <div class="card-body">
-        <a href="../html/verproducto.html"><img src="../img/caiman.png" class="img-fluid" alt="caiman"></a> 
+      
+      <div class="col-lg-3 text-center">
+        <div class="card border-0 mb-2">
+          <div class="card-body">
+            <a href="../html/verproducto.html"><img src="../img/caiman.png" class="img-fluid" alt="caiman"></a> 
+          </div>
+        </div>
+        <h3 style="color: #000000;">$9.990</h3>
+        <h5 style="color: #000000;">1 LT Caiman</h5>
       </div>
+      
+      <div class="col-lg-3 text-center">
+        <div class="card border-0 mb-2">
+          <div class="card-body">
+            <a href="../html/verproducto.html"><img src="../img/caiman.png" class="img-fluid" alt="caiman"></a> 
+          </div>
+        </div>
+        <h3 style="color: #000000;">$9.990</h3>
+        <h5 style="color: #000000;">1 LT Caiman</h5>
+      </div>
+      
+      <!-- Fin de la replicación del producto -->
+      
     </div>
-    <p>Caiman</p>
-    <p>$9.990</p>
+  </div>
 </section>
+
+
+<!-- barra pc -->
+<div class="container-fluid bg-dark text-light py-3 fixed-bottom d-none d-md-block">
+  <div class="row">
+    <div class="col-md-2 col-sm-3">
+      <!-- Logotipos y Certificado SSL -->
+      <img  style="height: 100px;" src="../img/log3.png" alt="Logo" class="mb-2"/>
+    </div>
+    <div class="col-md-3 col-sm-4">
+      <!-- Información de la Mesa de Ayuda -->
+      <h5>MESA DE AYUDA</h5>
+      <p>Horario de atención: Lunes a Viernes de 09:00 a 18:00 hrs.</p>
+      <!-- Otros detalles de contacto -->
+    </div>
+    <div class="col-md-3 col-sm-4">
+      <h5>POLITICAS</h5>
+      <p>ninguna porque somos bacanes jajaja xd.</p>
+      <!-- Políticas y Condiciones -->
+      <!-- Detalles sobre devoluciones, términos, etc. -->
+    </div>
+    <div class="col-md-3 col-sm-4">
+      <h5>REDES SOCIALES</h5>
+      <p>ninguna porque somos bacanes jajaja xd.</p>
+      <!-- Iconos de redes sociales -->
+      <!-- Agrega los íconos de tus redes sociales aquí -->
+    </div>
+  </div>
+</div>
+
+<!-- barra celular -->
+<div class="container-fluid bg-dark text-light py-2  d-md-none">
+  <div class="row">
+    <div class="col-md-2 col-sm-3">
+      <!-- Logotipos y Certificado SSL -->
+      <img src="../img/logo_chico.png" alt="Logo" class="mb-2"/>
+    </div>
+    <div class="col-md-3 col-sm-4">
+      <!-- Información de la Mesa de Ayuda -->
+      <h5>MESA DE AYUDA</h5>
+      <p>Horario de atención: Lunes a Viernes de 09:00 a 18:00 hrs.</p>
+      <!-- Otros detalles de contacto -->
+    </div>
+    <div class="col-md-3 col-sm-4">
+      <h5>POLITICAS</h5>
+      <p>ninguna porque somos bacanes jajaja xd.</p>
+      <!-- Políticas y Condiciones -->
+      <!-- Detalles sobre devoluciones, términos, etc. -->
+    </div>
+    <div class="col-md-3 col-sm-4">
+      <h5>REDES SOCIALES</h5>
+      <p>ninguna porque somos bacanes jajaja xd.</p>
+      <!-- Iconos de redes sociales -->
+      <!-- Agrega los íconos de tus redes sociales aquí -->
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
 
 </body>
 </html>
