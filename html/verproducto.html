@@ -127,24 +127,32 @@
     </div>
 
     <script>
-      document.getElementById('btn-registro').addEventListener('click', function(event) {
-          event.preventDefault(); // Evitar que el enlace se active
-          
-          // Crear la alerta
-          var alerta = document.createElement('div');
-          alerta.classList.add('alert', 'alert-success', 'custom-alert'); // Se agrega la clase 'custom-alert'
-          alerta.textContent = 'Se agregó con éxito';
-      
-          // Insertar la alerta en el body
-          document.body.appendChild(alerta);
-      
-          // Esperar 1 segundo antes de eliminar la alerta
-          setTimeout(function() {
-              alerta.remove();
-          }, 1000);
+      document.addEventListener('DOMContentLoaded', function() {
+          console.log('El DOM ha sido cargado');
+          var btnRegistro = document.getElementById('btn-registro');
+          if (btnRegistro) {
+              console.log('El botón se encontró en el DOM');
+              btnRegistro.addEventListener('click', function(event) {
+                  event.preventDefault(); // Evitar que el enlace se active
+                  
+                  // Crear la alerta
+                  var alerta = document.createElement('div');
+                  alerta.classList.add('alert', 'alert-success', 'custom-alert'); // Se agrega la clase 'custom-alert'
+                  alerta.textContent = 'Se agregó con éxito';
+              
+                  // Insertar la alerta en el body
+                  document.body.appendChild(alerta);
+              
+                  // Esperar 1 segundo antes de eliminar la alerta
+                  setTimeout(function() {
+                      alerta.remove();
+                  }, 1000);
+              });
+          } else {
+              console.log('No se encontró el botón en el DOM');
+          }
       });
   </script>
-    
   
 
 <!-- barra pc -->
