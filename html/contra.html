@@ -9,9 +9,10 @@
     <script src="../js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="../css/style.css">
 
+
 </head>
 <body style="background-color:    #e0d8c9">
-  <!-- navbar 1 -->
+
   <nav style="background-color: rgb(30, 30, 30);" class="navbar navbar-expand-md">
     <div class="container-fluid">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler" aria-controls="navbar-toggler" aria-expanded="false" aria-label="Toggle navigation">
@@ -90,105 +91,64 @@
     </div>
   </nav>
 
-  <div class="container-fluid mt-4 pt-4">
-
-  </div>
   
-      <div class="container mt-5">
+<div class="container mt-4 pt-4">
+
+</div>
+
+    <div  class="container mt-4 pt-4">
         <div class="row justify-content-center">
             <div class="col-md-12">
-                <div class="rounded bg-dark p-5 text-center">
-                    <!-- Contenido dentro de la figura gris -->
-                    <h1 style="color: aliceblue;" class="mt-0">Carrito de compras</h1>
-                    <div class="row">
-                        <div class="col-sm-12 col-md-4">
-                            <p class="mt-0">Item</p>
-                            <img style="height: 50px;" src="../img/caiman.png" alt="Item" class="img-fluid">
-                        </div>
-                        <div class="col-sm-12 col-md-4 align-items-center"> <!-- Añadido 'align-items-center' para centrar verticalmente -->
-                            <p class="mt-0">Cantidad</p>
-                            <p class="mt-0">-  1  +</p>
-                        </div>
-                        <div class="col-sm-12 col-md-4 align-items-center"> <!-- Añadido 'align-items-center' para centrar verticalmente -->
-                            <p class="mt-0">Subtotal</p>
-                            <p class="mt-0">$9.990</p>
+                <div  class="rounded  p-5 text-center bg-dark">
+                    <h1 style="color: aliceblue;" class="mt-0">Cambiar clave</h1> <br>
+                    <div class="row justify-content-center">
+                        <div class="col-sm-8">
+                            <div class="form-group mb-3">
+                                <input type="text" class="form-control" placeholder="Ingrese su correo">
+                            </div>
+                           
                             
+                    <div class="row justify-content-center mt-4">
+                        <div class="col-sm-8">
+                            <a href="../html/index.html" id="btn-ingresar" class="btn btn-light btn-lg btn-block">Enviar correo</a>
                         </div>
+                        
                     </div>
-                
-                    <div class="container mt-3">
-                        <div class="row justify-content-center">
-                            <a  href="pago.html" id="btn-pago" class="btn btn-light btn-sm">Pagar</a>
-                        </div>
-                    </div>
-                    </div>
+                    
                 </div>
+                
             </div>
         </div>
-    </div>
-  
-
-    <div class="container-fluid mt-4 pt-4">
-
+        
     </div>
 
+   
 
-    <!-- barra pc -->
-<div class="container-fluid bg-dark text-light py-3  fixed-bottom d-none d-md-block">
-  <div class="row">
-    <div class="col-md-2 col-sm-3">
-      <!-- Logotipos y Certificado SSL -->
-      <img  style="height: 100px;" src="../img/log3.png" alt="Logo" class="mb-2"/>
-    </div>
-    <div class="col-md-3 col-sm-4">
-      <!-- Información de la Mesa de Ayuda -->
-      <h5>MESA DE AYUDA</h5>
-      <p>Horario de atención: Lunes a Viernes de 09:00 a 18:00 hrs.</p>
-      <!-- Otros detalles de contacto -->
-    </div>
-    <div class="col-md-3 col-sm-4">
-      <h5>POLITICAS</h5>
-      <p>ninguna porque somos bacanes jajaja xd.</p>
-      <!-- Políticas y Condiciones -->
-      <!-- Detalles sobre devoluciones, términos, etc. -->
-    </div>
-    <div class="col-md-3 col-sm-4">
-      <h5>REDES SOCIALES</h5>
-      <p>ninguna porque somos bacanes jajaja xd.</p>
-      <!-- Iconos de redes sociales -->
-      <!-- Agrega los íconos de tus redes sociales aquí -->
-    </div>
-  </div>
-</div>
+    
+   
 
-<!-- barra celular -->
-<div class="container-fluid bg-dark text-light py-2  d-md-none">
-  <div class="row">
-    <div class="col-md-2 col-sm-3">
-      <!-- Logotipos y Certificado SSL -->
-      <img src="../img/log3.png" alt="Logo" class="mb-2"/>
-    </div>
-    <div class="col-md-3 col-sm-4">
-      <!-- Información de la Mesa de Ayuda -->
-      <h5>MESA DE AYUDA</h5>
-      <p>Horario de atención: Lunes a Viernes de 09:00 a 18:00 hrs.</p>
-      <!-- Otros detalles de contacto -->
-    </div>
-    <div class="col-md-3 col-sm-4">
-      <h5>POLITICAS</h5>
-      <p>ninguna porque somos bacanes jajaja xd.</p>
-      <!-- Políticas y Condiciones -->
-      <!-- Detalles sobre devoluciones, términos, etc. -->
-    </div>
-    <div class="col-md-3 col-sm-4">
-      <h5>REDES SOCIALES</h5>
-      <p>ninguna porque somos bacanes jajaja xd.</p>
-      <!-- Iconos de redes sociales -->
-      <!-- Agrega los íconos de tus redes sociales aquí -->
-    </div>
-  </div>
-</div>
 
+      
+
+    <script>
+        document.getElementById('btn-ingresar').addEventListener('click', function(event) {
+            event.preventDefault(); // Evitar que el enlace se active
+            
+            // Crear la alerta
+            var alerta = document.createElement('div');
+            alerta.classList.add('alert', 'alert-success', 'custom-alert'); // Se agrega la clase 'custom-alert'
+            alerta.textContent = 'ingreso exitoso';
+        
+            // Insertar la alerta en el body
+            document.body.appendChild(alerta);
+        
+            // Esperar 1 segundos antes de redireccionar
+            setTimeout(function() {
+                window.location.href = document.getElementById('btn-ingresar').href;
+            }, 1000);
+        });
+        </script>
+    
     
 </body>
 </html>

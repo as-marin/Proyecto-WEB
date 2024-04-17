@@ -92,7 +92,11 @@
   </nav>
 
   
-    <div class="container mt-5 pt-5">
+<div class="container mt-4 pt-4">
+
+</div>
+
+    <div  class="container mt-4 pt-4">
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div  class="rounded  p-5 text-center bg-dark">
@@ -105,16 +109,16 @@
                             <div class="form-group mb-3">
                                 <input type="text" class="form-control" placeholder="Ingrese su clave">
                             </div>
-                            <h6 style="color: aquamarine;">¿Olvidaste tu contraseña?</h3>
+                            <a href="../html/contra.html"><h6 style="color: aquamarine;" >¿Olvidaste tu contraseña?</h6></a><a href="../html/admin.html"><h6 style="color: aquamarine;" >¿Admin?</h6></a>
                           
                     </div>
                     <div class="row justify-content-center mt-4">
                         <div class="col-sm-8">
                             <a href="../html/index copy.html" id="btn-ingresar" class="btn btn-light btn-lg btn-block">Ingresar</a>
-                            <a href="../html/admin.html" id="btn-ingresar" class="btn btn-light btn-lg btn-block">Admin</a>
                         </div>
                         
                     </div>
+                    
                 </div>
                 
             </div>
@@ -122,90 +126,14 @@
         
     </div>
 
-    
-    <div class="row justify-content-center mt-4">
-      <div class="col-sm-8">
-          <a href="../html/admin.html" id="btn-ingresar" class="btn btn-light btn-lg btn-block">Admin</a>
-      </div>
-    
-<!-- barra pc -->
-<div class="container-fluid bg-dark text-light py-3 fixed-bottom d-none d-md-block">
-  <div class="row">
-    <div class="col-md-2 col-sm-3">
-      <!-- Logotipos y Certificado SSL -->
-      <img  style="height: 100px;" src="../img/log3.png" alt="Logo" class="mb-2"/>
-    </div>
-    <div class="col-md-3 col-sm-4">
-      <!-- Información de la Mesa de Ayuda -->
-      <h5>MESA DE AYUDA</h5>
-      <p>Horario de atención: Lunes a Viernes de 09:00 a 18:00 hrs.</p>
-      <!-- Otros detalles de contacto -->
-    </div>
-    <div class="col-md-3 col-sm-4">
-      <h5>POLITICAS</h5>
-      <p>ninguna porque somos bacanes jajaja xd.</p>
-      <!-- Políticas y Condiciones -->
-      <!-- Detalles sobre devoluciones, términos, etc. -->
-    </div>
-    <div class="col-md-3 col-sm-4">
-      <h5>REDES SOCIALES</h5>
-      <p>ninguna porque somos bacanes jajaja xd.</p>
-      <!-- Iconos de redes sociales -->
-      <!-- Agrega los íconos de tus redes sociales aquí -->
-    </div>
-  </div>
-</div>
+   
 
-<!-- barra celular -->
-<div class="container-fluid bg-dark text-light py-2  d-md-none">
-  <div class="row">
-    <div class="col-md-2 col-sm-3">
-      <!-- Logotipos y Certificado SSL -->
-      <img src="../img/log3.png" alt="Logo" class="mb-2"/>
-    </div>
-    <div class="col-md-3 col-sm-4">
-      <!-- Información de la Mesa de Ayuda -->
-      <h5>MESA DE AYUDA</h5>
-      <p>Horario de atención: Lunes a Viernes de 09:00 a 18:00 hrs.</p>
-      <!-- Otros detalles de contacto -->
-    </div>
-    <div class="col-md-3 col-sm-4">
-      <h5>POLITICAS</h5>
-      <p>ninguna porque somos bacanes jajaja xd.</p>
-      <!-- Políticas y Condiciones -->
-      <!-- Detalles sobre devoluciones, términos, etc. -->
-    </div>
-    <div class="col-md-3 col-sm-4">
-      <h5>REDES SOCIALES</h5>
-      <p>ninguna porque somos bacanes jajaja xd.</p>
-      <!-- Iconos de redes sociales -->
-      <!-- Agrega los íconos de tus redes sociales aquí -->
-    </div>
-  </div>
-</div>
+    
+   
 
 
       
 
-    <script>
-        document.getElementById('btn-ingresar').addEventListener('click', function(event) {
-            event.preventDefault(); // Evitar que el enlace se active
-            
-            // Crear la alerta
-            var alerta = document.createElement('div');
-            alerta.classList.add('alert', 'alert-success', 'custom-alert'); // Se agrega la clase 'custom-alert'
-            alerta.textContent = 'ingreso exitoso';
-        
-            // Insertar la alerta en el body
-            document.body.appendChild(alerta);
-        
-            // Esperar 1 segundos antes de redireccionar
-            setTimeout(function() {
-                window.location.href = document.getElementById('btn-ingresar').href;
-            }, 1000);
-        });
-        </script>
-    
-    
+  
 </body>
 </html>
