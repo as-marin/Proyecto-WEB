@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dar Jugo</title>
-    <link rel=" icon" href="../img/logo1.png" type="image/x-icon">
-    <link href="../css/bootstrap.min.css" rel="stylesheet"> 
-    <script src="../js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel=" icon" href="../img/logo2.png" type="image/x-icon">
+    <!-- Latest compiled and minified CSS -->
+<link href="../css/bootstrap.min.css" rel="stylesheet"> 
 
-
+<!-- Latest compiled JavaScript -->
+<script src="../js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="../css/style.css">
 </head>
 <body style="background-color:    #e0d8c9">
-
+  <!-- navbar 1 -->
   <nav style="background-color: rgb(30, 30, 30);" class="navbar navbar-expand-md">
     <div class="container-fluid">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler" aria-controls="navbar-toggler" aria-expanded="false" aria-label="Toggle navigation">
@@ -76,91 +77,127 @@
                       <img src="../img/carrito.png" alt="" style="height: 2rem; filter: brightness(0) invert(1);"> <!-- Agregado estilo para cambiar el color a blanco -->
                   </a>
               </li>
-      </ul>
       
-      
-      
-          <li class="nav-item">
-              <a class="nav-link user" href="iniciarsesion.html">Ingresar</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link user" href="crearu.html">Crear Cuenta</a>
-          </li>
-      </ul>
+              <ul class="navbar-nav" style="display: flex; align-items: center;">
+                <li class="nav-item">
+                    <a class="nav-link user" href="opciones.html" style="display: inline-block; padding: 0.5rem; border: 1px solid transparent; border-radius: 50%; margin-right: 10px;">
+                        <img src="../img/user.jpg" alt="" style="height: 2rem;  "> <!-- Agregado estilo para cambiar el color a blanco -->
+                    </a>
+                </li>
+
+
       </div>
     </div>
   </nav>
+  
+  <div id="miCarrusel" class="carousel slide" data-bs-ride="carousel">
+    <!-- Slides -->
+    <div class="carousel-inner" style="max-width: 800px; margin: 0 auto;">
+        <div class="carousel-item active">
+            <img src="../img/publi3.jpg" class="d-block w-100" alt="..." style="max-height: 600px; padding-top: 50px; padding-bottom: 50px;">
+        </div>
+        <div class="carousel-item">
+            <img src="../img/publi1.jpg" class="d-block w-100" alt="..." style="max-height: 600px; padding-top: 50px; padding-bottom: 50px;">
+        </div>
+    </div> <!-- Cierre de la etiqueta carousel-inner -->
+
+    <!-- Controles -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#miCarrusel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#miCarrusel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+    </button>
+</div> <!-- Cierre de la etiqueta miCarrusel -->
+
 
   
-    <div class="container mt-5 pt-5">
-        <div class="row justify-content-center">
-            <div class="col-md-12">
-                <div  class="rounded  p-5 text-center bg-dark">
-                    <h1 style="color: aliceblue;" class="mt-0">iniciar sesion</h1> <br>
-                    <div class="row justify-content-center">
-                        <div class="col-sm-8">
-                            <div class="form-group mb-3">
-                                <input type="text" class="form-control" placeholder="Ingrese su rut">
-                            </div>
-                            <div class="form-group mb-3">
-                                <input type="text" class="form-control" placeholder="Ingrese su clave">
-                            </div>
-                            <h6 style="color: aquamarine;">¿Olvidaste tu contraseña?</h3>
-                          
-                    </div>
-                    <div class="row justify-content-center mt-4">
-                        <div class="col-sm-8">
-                            <a href="../html/index copy.html" id="btn-ingresar" class="btn btn-light btn-lg btn-block">Ingresar</a>
-                        </div>
-                        
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        
-    </div>
+  
 
-    
-    <div class="row justify-content-center mt-4">
-      <div class="col-sm-8">
-          <a href="../html/admin.html" id="btn-ingresar" class="btn btn-light btn-lg btn-block">Admin</a>
+
+  
+
+  <div class="d-flex justify-content-center" style="padding-top: 20px;">
+    <img src="../img/publicidad.png" alt="" class="img-fluid mx-auto d-block">
+  </div>
+  
+  
+
+
+
+
+<!-- productos -->
+<section class="product">
+  <div class="container">
+    <div class="row py-4">
+      <div class="col-lg-5 m-auto text-center">
+        <h1 style="font-size: 60px;">Lo más vendido</h1>
+        <h6 style="color: #696969; font-size: 20px;">Productos más comprados</h6>
+       
       </div>
-    
-<!-- barra pc -->
-<div class="container-fluid bg-dark text-light py-3 fixed-bottom d-none d-md-block">
-  <div class="row">
-    <div class="col-md-2 col-sm-3">
-      <!-- Logotipos y Certificado SSL -->
-      <img  style="height: 100px;" src="../img/log3.png" alt="Logo" class="mb-2"/>
     </div>
-    <div class="col-md-3 col-sm-4">
-      <!-- Información de la Mesa de Ayuda -->
-      <h5>MESA DE AYUDA</h5>
-      <p>Horario de atención: Lunes a Viernes de 09:00 a 18:00 hrs.</p>
-      <!-- Otros detalles de contacto -->
-    </div>
-    <div class="col-md-3 col-sm-4">
-      <h5>POLITICAS</h5>
-      <p>ninguna porque somos bacanes jajaja xd.</p>
-      <!-- Políticas y Condiciones -->
-      <!-- Detalles sobre devoluciones, términos, etc. -->
-    </div>
-    <div class="col-md-3 col-sm-4">
-      <h5>REDES SOCIALES</h5>
-      <p>ninguna porque somos bacanes jajaja xd.</p>
-      <!-- Iconos de redes sociales -->
-      <!-- Agrega los íconos de tus redes sociales aquí -->
+    <div class="row ">
+      <div class="col-lg-3 text-center">
+        <div class="card border-0 mb-2">
+          <div class="card-body">
+            <a href="../html/verproducto.html"><img src="../img/caiman.png" class="img-fluid" alt="caiman"></a> 
+          </div>
+        </div>
+        <h3 style="color: #000000;">$9.990</h3>
+        <h5 style="color: #000000;">1 LT Caiman</h5>
+      </div>
+      
+      <!-- Replicación del producto -->
+      
+      <div class="col-lg-3 text-center">
+        <div class="card border-0 mb-2">
+          <div class="card-body">
+            <a href="../html/verproducto.html"><img src="../img/caiman.png" class="img-fluid" alt="caiman"></a> 
+          </div>
+        </div>
+        <h3 style="color: #000000;">$9.990</h3>
+        <h5 style="color: #000000;">1 LT Caiman</h5>
+      </div>
+      
+      <div class="col-lg-3 text-center">
+        <div class="card border-0 mb-2">
+          <div class="card-body">
+            <a href="../html/verproducto.html"><img src="../img/caiman.png" class="img-fluid" alt="caiman"></a> 
+          </div>
+        </div>
+        <h3 style="color: #000000;">$9.990</h3>
+        <h5 style="color: #000000;">1 LT Caiman</h5>
+      </div>
+      
+      <div class="col-lg-3 text-center">
+        <div class="card border-0 mb-2">
+          <div class="card-body">
+            <a href="../html/verproducto.html"><img src="../img/caiman.png" class="img-fluid" alt="caiman"></a> 
+          </div>
+        </div>
+        <h3 style="color: #000000;">$9.990</h3>
+        <h5 style="color: #000000;">1 LT Caiman</h5>
+      </div>
+      
+      <!-- Fin de la replicación del producto -->
+      
     </div>
   </div>
-</div>
+</section>
+<br><br><br>
+
+<!-- barra pc -->
+
+
 
 <!-- barra celular -->
-<div class="container-fluid bg-dark text-light py-2  d-md-none">
+<div class="container-fluid bg-dark text-light py-3 ">
   <div class="row">
     <div class="col-md-2 col-sm-3">
       <!-- Logotipos y Certificado SSL -->
-      <img src="../img/log3.png" alt="Logo" class="mb-2"/>
+      <img style="width: 100px;" src="../img/log3.png" alt="Logo" class="mb-2"/>
     </div>
     <div class="col-md-3 col-sm-4">
       <!-- Información de la Mesa de Ayuda -->
@@ -184,27 +221,8 @@
 </div>
 
 
-      
 
-    <script>
-        document.getElementById('btn-ingresar').addEventListener('click', function(event) {
-            event.preventDefault(); // Evitar que el enlace se active
-            
-            // Crear la alerta
-            var alerta = document.createElement('div');
-            alerta.classList.add('alert', 'alert-success', 'custom-alert'); // Se agrega la clase 'custom-alert'
-            alerta.textContent = 'ingreso exitoso';
-        
-            // Insertar la alerta en el body
-            document.body.appendChild(alerta);
-        
-            // Esperar 1 segundos antes de redireccionar
-            setTimeout(function() {
-                window.location.href = document.getElementById('btn-ingresar').href;
-            }, 1000);
-        });
-        </script>
-    
-    
+
+
 </body>
 </html>
