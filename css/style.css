@@ -45,23 +45,32 @@ transition: color 0.3s ease;
 }
 
 h1 {
-    font-family: 'Arial', sans-serif; /* Cambia a una fuente más dinámica */
-    color: #000000; /* Color vibrante */
+    font-family: 'Arial', sans-serif; 
+    color: #000000; 
 
   }
 
   .custom-bg {
-    background-color: #333333; /* Gris oscuro */
-    color: white; /* Texto blanco */
+    background-color: #333333; 
+    color: white; 
 }
 
 .custom-text-color {
-  color: #333333; /* Color del texto del botón */
+  color: #333333; 
 }
 
 .product .card-body img {
-  max-width: 100%; /* Ajusta el ancho máximo de la imagen */
-  height: auto; /* Altura automática para mantener la proporción */
-  padding: 10px; /* Añade un padding alrededor de la imagen */
+  max-width: 100%; 
+  height: auto; 
+  padding: 10px; 
+}
+
+@media (min-width: 768px) {
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: auto;
+      margin-left: 490px; 
+      margin-right: 490px; 
+  }
 }
 
