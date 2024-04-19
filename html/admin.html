@@ -41,63 +41,33 @@
     <div class="container-fluid">
       <div class="collapse navbar-collapse" id="navbar-toggler">
           <ul class="navbar-nav mr-auto justify-content-start align-items-center">
-              <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="destilados.html" style="color: white;">Destilados</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="licores.html" style="color: white;">Licores</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="cervezas.html" style="color: white;">Cervezas</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="whiskies.html" style="color: white;">Whiskies</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="vinos.html" style="color: white;">Vinos</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="espumantes.html" style="color: white;">Espumantes</a>
-              </li>
+              
             <li class="nav-item">
-                <a class="nav-link" href="historialEnvio.html" style="color: rgb(255, 0, 0);">Historial Pedidos</a>
+                <a class="nav-link" href="historialEnvio.html" style="color: aliceblue;">Historial Pedidos</a>
             </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="gestionusuario.html" style="color:aliceblue;">Gestion de usuarios</a>
+          </li>
+
           </ul>
       </div>
   </div>
   
 
-      <ul class="navbar-nav" style="display: flex; align-items: center;">
-        <li class="nav-item">
-            <a class="nav-link user" href="user.html" style="display: inline-block; padding: 0.5rem; border: 1px solid transparent; border-radius: 50%; margin-right: 10px;">
-                <img src="../img/dyler.png" alt="" style="height: 2rem; filter: brightness(0) invert(1);"> <!-- Agregado estilo para cambiar el color a blanco -->
-            </a>
-        </li>
-    
-        <ul class="navbar-nav" style="display: flex; align-items: center;">
-            <li class="nav-item">
-                <a class="nav-link user" href="carrito.html" style="display: inline-block; padding: 0.5rem; border: 1px solid transparent; border-radius: 50%; margin-right: 10px;">
-                    <img src="../img/carrito.png" alt="" style="height: 2rem; filter: brightness(0) invert(1);"> <!-- Agregado estilo para cambiar el color a blanco -->
-                </a>
-            </li>
-    </ul>
-    
-    
-    
-        <li class="nav-item">
-            <a class="nav-link user" href="iniciarsesion.html">Ingresar</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link user" href="crearu.html">Crear Cuenta</a>
-        </li>
-    </ul>
-    </div>
-  </div>
+
 </nav>
+
+<div class="container-fluid mb-4 mt-4 ">
+  <h1 style="color: aliceblue;">Productos</h1>
+</div>
+
 <!-- agregar producto -->
- <div class="d-flex justify-content-center"><button type="button" class="btn btn-primary content-center" data-bs-toggle="modal" data-bs-target="#agregarProductoModal">
+<div class="d-flex justify-content-between mb-4 mt-4 mx-4"><button type="button" class="btn btn-light " data-bs-toggle="modal" data-bs-target="#agregarProductoModal">
   Agregar Producto
 </button> </div>
+
+
 <!-- Modal para agregar producto -->
 <div class="modal fade" id="agregarProductoModal" tabindex="-1" aria-labelledby="agregarProductoModalLabel" aria-hidden="true">
   <div class="modal-dialog">
