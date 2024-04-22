@@ -94,37 +94,40 @@
   
 <div class="container mt-4 pt-4">
 
-</div>
-
-    <div  class="container mt-4 pt-4">
+    <div class="container mt-4 pt-4">
         <div class="row justify-content-center">
             <div class="col-md-12">
-                <div  class="rounded  p-5 text-center bg-dark">
-                    <h1 style="color: aliceblue;" class="mt-0">iniciar sesion</h1> <br>
-                    <div class="row justify-content-center">
-                        <div class="col-sm-8">
-                            <div class="form-group mb-3">
-                                <input type="text" class="form-control" placeholder="Ingrese su rut">
+                <div class="rounded p-5 text-center bg-dark">
+                    <h1 style="color: aliceblue;" class="mt-0">Iniciar sesión</h1><br>
+                    <form id="loginForm" method="post" action="index copy.html">
+                        <div class="row justify-content-center">
+                            <div class="col-sm-8">
+                                <div class="form-group mb-3">
+                                    <input type="text" class="form-control" placeholder="Ingrese su rut" required>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <input type="password" class="form-control" placeholder="Ingrese su clave" required>
+                                </div>
                             </div>
-                            <div class="form-group mb-3">
-                                <input type="text" class="form-control" placeholder="Ingrese su clave">
-                            </div>
-                            <a href="../html/contra.html"><h6 style="color: aquamarine;" >¿Olvidaste tu contraseña?</h6></a><a href="../html/admin.html"><h6 style="color: aquamarine;" >¿Admin?</h6></a>
-                          
-                    </div>
-                    <div class="row justify-content-center mt-4">
-                        <div class="col-sm-8">
-                            <a href="../html/index copy.html" id="btn-ingresar" class="btn btn-light btn-lg btn-block">Ingresar</a>
                         </div>
-                        
-                    </div>
-                    
+                        <div class="row justify-content-center">
+                            <div class="col-sm-8">
+                                <a href="../html/contra.html"><h6 style="color: aquamarine;">¿Olvidaste tu contraseña?</h6></a>
+                                <a href="../html/admin.html"><h6 style="color: aquamarine;">¿Admin?</h6></a>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center mt-4">
+                            <div class="col-sm-8">
+                                <button type="submit" class="btn btn-light btn-lg btn-block">Ingresar</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-                
             </div>
         </div>
-        
     </div>
+    
+    
 
    
 
