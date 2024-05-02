@@ -92,6 +92,8 @@
 
   <div class="container-fluid mt-4 pt-4">
 
+
+    
   </div>
   
       <div class="container mt-5">
@@ -105,10 +107,14 @@
                             <p class="mt-0">Item</p>
                             <img style="height: 50px;" src="../img/caiman.png" alt="Item" class="img-fluid">
                         </div>
-                        <div class="col-sm-12 col-md-4 align-items-center"> <!-- Añadido 'align-items-center' para centrar verticalmente -->
-                            <p class="mt-0">Cantidad</p>
-                            <p class="mt-0">-  1  +</p>
-                        </div>
+                        <div class="col-sm-12 col-md-4 align-items-center">
+                          <p class="mt-0">Cantidad</p>
+                          <form id="productForm" action="">
+                            <label for="idcantidad"></label>
+                              <input type="number" id="idcantidad" name="quantity" min="1" required onchange="limpiarSiMenorOIgualCero()">
+                          </form>
+                      </div>
+                      
                         <div class="col-sm-12 col-md-4 align-items-center"> <!-- Añadido 'align-items-center' para centrar verticalmente -->
                             <p class="mt-0">Subtotal</p>
                             <p class="mt-0">$9.990</p>
@@ -188,7 +194,7 @@
     </div>
   </div>
 </div>
-
+<script src="../js/cantProductos.js"></script>
     
 </body>
 </html>
