@@ -64,27 +64,47 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="agregarProductoModalLabel">Agregar Nuevo Producto</h5>
+        <h5 class="modal-title" id="agregarProductoModalLabel">Agregar Nuevo Usuario</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <form>
-          <div class="mb-3">
-            <label for="nombreProducto" class="form-label">Nombre</label>
-            <input type="text" class="form-control" id="nombreProducto" placeholder="Ingrese el nombre del producto">
-          </div>
-          <div class="mb-3">
-            <label for="precioProducto" class="form-label">Precio</label>
-            <input type="text" class="form-control" id="precioProducto" placeholder="Ingrese el precio del producto">
-          </div>
-          <div class="mb-3">
-            <label for="descripcionProducto" class="form-label">Descripción</label>
-            <textarea class="form-control" id="descripcionProducto" rows="3" placeholder="Ingrese la descripción del producto"></textarea>
-          </div>
-          <div class="mb-3">
-            <label for="imagenProducto" class="form-label">Imagen</label>
-            <input type="file" class="form-control" id="imagenProducto">
-          </div>
+          <div class="form-group mb-3">
+            <label for="idrut" class="form-label" id="rutMessage"></label>
+            <input type="text" class="form-control" name="rut" id="idrut" required maxlength="10" minlength="9" placeholder="Ingrese su rut" onblur="Fn.validaRut(this.value)">
+        </div>
+        <div class="form-group mb-3">
+            <label for="idnombre" class="form-label"></label>
+            <input type="text" class="form-control" name="nombre" id="idnombre" placeholder="Ingrese su nombre" required minlength="2" oninput="" >
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="idape" class="form-label"></label>
+            <input type="text" class="form-control" name="apell" id="idape" placeholder="Ingrese su apellido" required minlength="2" >
+        </div>
+        <div class="form-group mb-3">
+            <label for="idemail" class="form-label"></label>
+            <input type="email" class="form-control" name="email" id="idemail" placeholder="Ingrese su mail" required minlength="2" >
+        </div>
+        <div class="form-group mb-3">
+            <label for="idfono" class="form-label"></label>
+            <input type="text" class="form-control" name="fono" id="idfono" placeholder="Ingrese su teléfono" required minlength="2" >
+        </div>
+        <div class="form-group mb-3">
+            <label for="fechaNacimiento" class="form-label" id="edadMessage"></label>
+            <input type="date" class="form-control" id="fechaNacimiento" required onchange="validarEdad()"> 
+        </div>
+        <div class="form-group mb-3">
+            <label for="idpass1" class="form-label"></label>
+            <input type="password" class="form-control" name="pass1" id="idpass1" placeholder="Contraseña" required minlength="2" >
+        </div>
+        <div class="form-group mb-3">
+            <label for="idpass2" class="form-label"></label>
+            <input type="password" class="form-control" name="pass2" id="idpass2" placeholder="Repetir contraseña" required minlength="2" >
+        </div>
+    </div>
+
+    
           <button type="submit" class="btn btn-primary">Agregar</button>
         </form>
       </div>
@@ -112,20 +132,20 @@
         <thead>
             <tr>
                 <th scope="col">Rut</th>
-                <th scope="col">Direccion</th>
-                <th scope="col">Total</th>
-                <th scope="col">Fecha</th>
-                <th scope="col">Hora</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Numero</th>
+                <th scope="col">Correo</th>
+                <th scope="col">Nacimiento</th>
                 <th scope="col">Seleccionar</th>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td>20365024-8</td>
-                <td>juanito 421</td>
-                <td>$9.990</td>
-                <td>12/04/2024</td>
-                <td>13:01:54</td>
+                <td>juan</td>
+                <td>123456</td>
+                <td>mrjuan888@gmail.com</td>
+                <td>14/02/2003</td>
                 <td>
                     <button class="edit-button">Editar</button>
                     <button class="delete-button">Borrar</button>
@@ -134,11 +154,11 @@
 
             </tr>
             <tr>
-                <td>Paicaví 3280</td>
-                <td>Caiman 1 litro</td>
-                <td>$9.990</td>
-                <td>12/04/2024</td>
-                <td>13:01:54</td>
+              <td>20365024-8</td>
+              <td>juan</td>
+              <td>123456</td>
+              <td>mrjuan888@gmail.com</td>
+              <td>14/02/2003</td>
                 <td>
                     <button class="edit-button">Editar</button>
                     <button class="delete-button">Borrar</button>
@@ -151,6 +171,9 @@
     </table>
 </div>
 
+<script src="../js/validarFecha.js"></script>
+<script src="../js/validarRut.js"></script>
+   
 
 </body>
 </html>
