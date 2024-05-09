@@ -76,18 +76,18 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form>
+        <form method="get" id="addproducto" >
           <div class="mb-3">
-            <label for="nombreProducto" class="form-label">Nombre</label>
-            <input type="text" class="form-control" id="nombreProducto" placeholder="Ingrese el nombre del producto">
+            <label for="idnombreProducto" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="idnombreProducto" placeholder="Ingrese el nombre del producto" required minlength="2" oninput="limpiarCaracteres()">
           </div>
           <div class="mb-3">
-            <label for="precioProducto" class="form-label">Precio</label>
-            <input type="text" class="form-control" id="precioProducto" placeholder="Ingrese el precio del producto">
+            <label for="idprecioProducto" class="form-label">Precio</label>
+            <input type="text" class="form-control" id="idprecioProducto" placeholder="Ingrese el precio del producto" required oninput="precioprod()" minlength="4">
           </div>
           <div class="mb-3">
-            <label for="descripcionProducto" class="form-label">Descripción</label>
-            <textarea class="form-control" id="descripcionProducto" rows="3" placeholder="Ingrese la descripción del producto"></textarea>
+            <label for="iddescripcionProducto" class="form-label">Descripción</label>
+            <textarea class="form-control" id="iddescripcionProducto" rows="3" placeholder="Ingrese la descripción del producto" required minlength="2"></textarea>
           </div>
           <div class="mb-3">
             <label for="imagenProducto" class="form-label">Imagen</label>
@@ -130,6 +130,9 @@
         </tr>
     </tbody>
 </table>
-
+sc
+<script src="../js/verCaracteres.js"></script>
+<script src="../js/precioProd.js"></script>
 </body>
+
 </html>
