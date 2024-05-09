@@ -99,16 +99,16 @@
             <div class="col-md-12">
                 <div class="rounded p-5 text-center bg-dark">
                     <h1 style="color: aliceblue;" class="mt-0">Iniciar sesión</h1><br>
-                    <form id="loginForm" method="post" action="index copy.html" class="was-validated">
+                    <form id="loginForm" method="post" action="index copy.html" class="">
                         <div class="row justify-content-center">
                             <div class="col-sm-8">
                                 <div class="form-group mb-3">
-                                    <label for="idrutini" class="form-label"></label>
-                                    <input type="text" class="form-control" name="rutini" id="idrutini" placeholder="Ingrese su rut" required maxlength="10" minlength="9">
+                                    <label for="idrutini" class="form-label" id="rutMessage"></label>
+                                    <input type="text" class="form-control" name="rutini" id="idrutini" placeholder="Ingrese su rut" required maxlength="10" minlength="9"  onblur="Fn.validaRut(this.value)" oninput="soloNum('idrutini')">
                                 </div>
                                 <div class="form-group mb-3">
-                                    <label for="idrutini" class="form-label"></label>
-                                    <input type="password" class="form-control"name="rutini" id="idrutini"  placeholder="Ingrese su clave" required minlength="2">
+                                    <label for="idpasslog" class="form-label"></label>
+                                    <input type="password" class="form-control"name="pass" id="idpasslog"  placeholder="Ingrese su clave" required minlength="2">
                                 </div>
                             </div>
                         </div>
@@ -133,7 +133,8 @@
 
    
 
-    
+<script src="../js/validarRut.js"></script>
+<script src="../js/numGuion.js"></script>
    
 
 
