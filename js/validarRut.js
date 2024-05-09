@@ -2,7 +2,7 @@ var Fn = {
     // Valida el rut con su cadena completa "XXXXXXXX-X"
     validaRut: function(rutCompleto) {
         if (!/^[0-9]+[-|‐]{1}[0-9kK]{1}$/.test(rutCompleto)) {
-
+            document.getElementById("rutMessage").innerHTML = "El RUT ingresado es inválido.";
             return false;
         }
         
@@ -27,4 +27,4 @@ var Fn = {
             S = (S + T % 10 * (9 - M++ % 6)) % 11;
         return S ? S - 1 : 'k';
     }
-}
+};
