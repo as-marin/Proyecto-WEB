@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dar Jugo</title>
-    <link rel=" icon" href="../img/log3.png" type="image/x-icon">
+    <link rel=" icon" href="../img/logo1.png" type="image/x-icon">
     <link href="../css/bootstrap.min.css" rel="stylesheet"> 
     <script src="../js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="../css/style.css">
@@ -89,32 +89,51 @@
                     <h1 style="color: aliceblue;" class="mt-0">Cambiar Detalles</h1>
                     <div class="row justify-content-center">
                         <div class="col-sm-6">
-                            <div class="form-group mb-3">
-                                <input type="text" class="form-control" placeholder="Cambiar su rut">
+
+                        <form>
+                            <div class="input-group mb-3 pt-4">
+                                <input type="text" class="form-control" name="nombre" id="idnombre" placeholder="Ingrese su nombre" required minlength="2" oninput="limpiarSoloLetras('idnombre')" >
+                                <button type="submit" class="btn btn-light btn-lg btn-block">Cambiar</button>
                             </div>
-                            <div class="form-group mb-3">
-                                <input type="text" class="form-control" placeholder="Cambiar su nombre">
+                        </form>
+
+                        <form>
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" name="apell" id="idape" placeholder="Ingrese su apellido" required minlength="2" oninput="limpiarSoloLetras('idape')" >
+                                <button type="submit" class="btn btn-light btn-lg btn-block">Cambiar</button>
                             </div>
-                            <div class="form-group mb-3">
-                                <input type="text" class="form-control" placeholder="Cambiar su mail">
+                        </form>
+
+                         
+                        <form>
+                            <div class="input-group mb-3">
+                                <input type="email" class="form-control" name="email" id="idemail" placeholder="Ingrese su mail" required minlength="2" >
+                                <button type="submit" class="btn btn-light btn-lg btn-block">Cambiar</button>
                             </div>
-                            <div class="form-group mb-3">
-                                <input type="text" class="form-control" placeholder="Cambiar su apellido">
+                        </form>
+
+                        <form>
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" name="fono" id="idfono" placeholder="Ingrese su teléfono" required minlength="9" maxlength="9" oninput="soloNumeros('idfono')" >
+                                <button type="submit" class="btn btn-light btn-lg btn-block">Cambiar</button>
                             </div>
-                            <div class="form-group mb-3">
-                                <input type="tel" class="form-control" placeholder="Cambiar su teléfono">
+                        </form>
+
+                        <form>
+                            <div class="input-group mb-3">
+                                <input type="password" class="form-control" name="pass1" id="idpass1" placeholder="Contraseña" required minlength="2" >
+                                <input type="password" class="form-control" name="pass2" id="idpass2" placeholder="Repetir contraseña" required minlength="2" >
+                                <button type="submit" class="btn btn-light btn-lg btn-block">Cambiar</button>
                             </div>
-                           
-                            <div class="form-group mb-3">
-                                <input type="password" class="form-control" placeholder="Cambiar Contraseña">
-                            </div>
-                            <div class="form-group mb-3">
-                                <input type="password" class="form-control" placeholder="Repetir contraseña">
-                          
+
+
+                        </form>
+                            
+                                
                     </div>
                     <div class="row justify-content-center mt-4">
                         <div class="col-sm-8">
-                            <a href="../html/index.html" id="btn-registro" class="btn btn-light btn-lg btn-block">Cambiar</a>
+                            <a href="../html/index.html" id="btn-registro" class="btn btn-light btn-lg btn-block">Volver</a>
                         </div>
                     </div>
                 </div>
@@ -126,6 +145,13 @@
 
 
 
+    <script src="../js/validarFecha.js"></script>
+    <script src="../js/validarRut.js"></script>
+    <script src="../js/soloLetras.js"></script>
+    <script src="../js/numGuion.js"></script>
+    <script src="../js/validarFono.js"></script>
+    <script src="../js/validarRegistroForm.js"></script>
+        
 
     
     
