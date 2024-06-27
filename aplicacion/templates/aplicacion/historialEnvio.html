@@ -1,0 +1,62 @@
+{% extends "aplicacion/base_admin.html" %}
+{% load static %}
+
+
+{% block contenido %}
+
+
+
+
+<div class="container-fluid mb-4 mt-4 ">
+  <h1 style="color: aliceblue;">Historial de pedidos</h1>
+
+</div>
+
+
+
+
+
+<!-- tabla con los productos -->
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Dirección</th>
+                <th scope="col">Productos</th>
+                <th scope="col">Total</th>
+                <th scope="col">Fecha</th>
+                <th scope="col">Hora</th>
+                <th scope="col">Funciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Casa del cliffer</td>
+                <td>Caiman 1 litro</td>
+                <td>$9.990</td>
+                <td>12/04/2024</td>
+                <td>13:01:54</td>
+                <td>
+                  <button class="edit-button">Editar</button>
+                  <button class="delete-button">Borrar</button>
+                  
+              </td>
+
+            </tr>
+            <tr>
+                <td>Paicaví 3280</td>
+                <td>Caiman 1 litro</td>
+                <td>$9.990</td>
+                <td>12/04/2024</td>
+                <td>13:01:54</td>
+                <td>
+                  <button class="edit-button">Editar</button>
+                  <button class="delete-button">Borrar</button>
+                  
+              </td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>
+{% endblock contenido %}
