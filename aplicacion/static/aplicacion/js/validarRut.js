@@ -1,8 +1,22 @@
+document.addEventListener('DOMContentLoaded', function() {
+    var rutInput = document.getElementById('rut');
+    if (rutInput) {
+        rutInput.addEventListener('blur', function() {
+            var rutValue = rutInput.value;
+            Fn.validaRut(rutValue);
+        });
+    }
+});
+
 var Fn = {
     // Valida el rut con su cadena completa "XXXXXXXX-X"
     validaRut: function(rutCompleto) {
+        var messageElement = document.getElementById("rutMessage");
+
         if (!/^[0-9]+[-|‐]{1}[0-9kK]{1}$/.test(rutCompleto)) {
-            document.getElementById("rutMessage").innerHTML = "El RUT ingresado es inválido.";
+            if (messageElement) {
+                messageElement.innerHTML = "El RUT ingresado es inválido.";
+            }
             return false;
         }
         
@@ -12,11 +26,15 @@ var Fn = {
         if (digv == 'K') digv = 'k';
         if (Fn.dv(rut) == digv) {
             // El RUT es válido
-            document.getElementById("rutMessage").innerHTML = "El RUT ingresado es válido.";
+            if (messageElement) {
+                messageElement.innerHTML = "El RUT ingresado es válido.";
+            }
             return true;
         } else {
             // El RUT es inválido
-            document.getElementById("rutMessage").innerHTML = "El RUT ingresado es inválido.";
+            if (messageElement) {
+                messageElement.innerHTML = "El RUT ingresado es inválido.";
+            }
             return false;
         }
     },

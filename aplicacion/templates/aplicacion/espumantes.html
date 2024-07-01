@@ -11,56 +11,24 @@
   <div class="container">
     <div class="row py-4">
       <div class="col-lg-5 m-auto text-center">
-        <h1 style="font-size: 60px;">Lo más vendido</h1>
+        <h1 style="font-size: 60px;">Espumantes</h1>
+        <h1 style="font-size: 60px;">Los más vendido</h1>
         <h6 style="color: #696969; font-size: 20px;">Productos más comprados</h6>
         <button>Filtro</button>  <button>Filtro</button>  <button>Filtro</button>  <button>Filtro</button> <button>Filtro</button>
       </div>
     </div>
     <div class="row ">
+      {% for p in producto  %}
       <div class="col-lg-3 text-center">
         <div class="card border-0 mb-2">
           <div class="card-body">
-            <a href="{% url "verproducto" %}"><img src="{% static "aplicacion/img/caiman.png" %}" class="img-fluid" alt="caiman"></a> 
+            <a href="{% url "verproducto" p.id %}"><img style="width: 350px; height: 250px" src="{{p.imagen.url}}" class="img-fluid" alt="{{p.nombre}}"></a> 
           </div>
         </div>
-        <h3 style="color: #000000;">$9.990</h3>
-        <h5 style="color: #000000;">1 LT Caiman</h5>
+        <h3 style="color: #000000;">${{p.precio}}</h3>
+        <h5 style="color: #000000;">{{p.nombre}}</h5>
       </div>
-      
-      <!-- Replicación del producto -->
-      
-      <div class="col-lg-3 text-center">
-        <div class="card border-0 mb-2">
-          <div class="card-body">
-            <a href="{% url "verproducto" %}"><img src="{% static "aplicacion/img/caiman.png" %}" class="img-fluid" alt="caiman"></a> 
-          </div>
-        </div>
-        <h3 style="color: #000000;">$9.990</h3>
-        <h5 style="color: #000000;">1 LT Caiman</h5>
-      </div>
-      
-      <div class="col-lg-3 text-center">
-        <div class="card border-0 mb-2">
-          <div class="card-body">
-            <a href="{% url "verproducto" %}"><img src="{% static "aplicacion/img/caiman.png" %}" class="img-fluid" alt="caiman"></a> 
-          </div>
-        </div>
-        <h3 style="color: #000000;">$9.990</h3>
-        <h5 style="color: #000000;">1 LT Caiman</h5>
-      </div>
-      
-      <div class="col-lg-3 text-center">
-        <div class="card border-0 mb-2">
-          <div class="card-body">
-            <a href="{% url "verproducto" %}"><img src="{% static "aplicacion/img/caiman.png" %}" class="img-fluid" alt="caiman"></a> 
-          </div>
-        </div>
-        <h3 style="color: #000000;">$9.990</h3>
-        <h5 style="color: #000000;">1 LT Caiman</h5>
-      </div>
-      
-      <!-- Fin de la replicación del producto -->
-      
+      {% endfor  %}
     </div>
   </div>
 </section>

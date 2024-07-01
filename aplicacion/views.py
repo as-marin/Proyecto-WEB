@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import Producto, Usuario,Carrito,ItemCarrito, Pedido
-from .forms import ProductoForm, UpdateProductoForm, UpdateUsuarioForm
+from .forms import ProductoForm, UpdateProductoForm, UpdateUsuarioForm,PedidoForm
 from django.shortcuts import get_object_or_404, redirect
 
 from django.contrib.auth.decorators import login_required,permission_required
@@ -141,7 +141,7 @@ def carrito(request):
 
 
 def cervezas(request):
-    producto = Producto.objects.all()
+    producto = Producto.objects.filter(tipo='Cerveza')
 
 
     datos = {
@@ -164,7 +164,9 @@ def crearu(request):
     return render(request, 'aplicacion/crearu.html', {'form': form})
 
 def destilados(request):
-    producto = Producto.objects.all()
+
+
+    producto = Producto.objects.filter(tipo='Destilado')
 
 
     datos = {
@@ -173,7 +175,7 @@ def destilados(request):
     return render(request,'aplicacion/destilados.html',datos)
 
 def espumantes(request):
-    producto = Producto.objects.all()
+    producto = Producto.objects.filter(tipo='Espumante')
 
 
     datos = {
@@ -228,14 +230,51 @@ def historial_user(request):
 
 @staff_required
 def historialEnvio(request):
-    return render(request,'aplicacion/historialEnvio.html')
+
+    if request.method == 'POST':
+        pedido_id = request.POST.get('pedido_id')
+        nuevo_estado = request.POST.get('estado')
+
+        if not pedido_id or not nuevo_estado:
+            return redirect('historialEnvio')
+
+        try:
+            pedido = Pedido.objects.get(id=pedido_id)
+            pedido.estado = nuevo_estado
+            pedido.save()
+            return redirect('historialEnvio')
+        except Pedido.DoesNotExist:
+            return redirect('historialEnvio')
+    
+    pedidos = Pedido.objects.order_by('-fecha_pedido')
+
+    pedidos=list(pedidos)
+
+
+
+    for i in pedidos:
+        i.productos=i.productos.replace("\'", "\"")
+        
+        i.productos=json.loads(i.productos)
+        
+
+    form=PedidoForm()
+
+ 
+
+    datos = {
+        'pedidos': pedidos,
+        'form':form
+    }
+
+    return render(request,'aplicacion/historialEnvio.html',datos)
 
 def index_copy(request):
     return render(request,'aplicacion/index_copy.html')
 
 
 def licores(request):
-    producto = Producto.objects.all()
+    producto = Producto.objects.filter(tipo='Licor')
 
 
     datos = {
@@ -280,7 +319,7 @@ def verproducto(request,id):
     return render(request,'aplicacion/verproducto.html',datos)
 
 def vinos(request):
-    producto = Producto.objects.all()
+    producto = Producto.objects.filter(tipo='Vino')
 
 
     datos = {
@@ -289,7 +328,7 @@ def vinos(request):
     return render(request,'aplicacion/vinos.html',datos)
 
 def whiskies(request):
-    producto = Producto.objects.all()
+    producto = Producto.objects.filter(tipo='Whisky')
 
 
     datos = {

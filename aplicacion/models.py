@@ -59,6 +59,14 @@ class ItemCarrito(models.Model):
 
 
 class Pedido(models.Model):
+    EN_PROCESO = 'En Proceso'
+    FINALIZADO = 'Finalizado'
+
+    ESTADO_CHOICES = [
+        (EN_PROCESO, 'En Proceso'),
+        (FINALIZADO, 'Finalizado'),
+    ]
+
     usuario = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     productos = models.TextField()  
     subtotal = models.DecimalField(max_digits=10, decimal_places=2)
@@ -67,22 +75,23 @@ class Pedido(models.Model):
     email = models.EmailField()
     direccion = models.TextField()
     departamento_oficina_piso = models.CharField(max_length=100, blank=True, null=True)
+    estado = models.CharField(max_length=10, choices=ESTADO_CHOICES, default=EN_PROCESO)
 
     def __str__(self):
         return f"Pedido de {self.usuario.nombre} - {self.fecha_pedido}"
 
 
-class DetallePedido(models.Model):
-    pedido = models.ForeignKey(Pedido, on_delete=models.CASCADE, related_name='detalles')
-    producto = models.ForeignKey(Producto, on_delete=models.CASCADE)
-    cantidad = models.PositiveIntegerField(default=1)
-    precio_unitario = models.DecimalField(max_digits=10, decimal_places=2)
+# class DetallePedido(models.Model):
+#     pedido = models.ForeignKey(Pedido, on_delete=models.CASCADE, related_name='detalles')
+#     producto = models.ForeignKey(Producto, on_delete=models.CASCADE)
+#     cantidad = models.PositiveIntegerField(default=1)
+#     precio_unitario = models.DecimalField(max_digits=10, decimal_places=2)
 
-    def subtotal(self):
-        return self.cantidad * self.precio_unitario
+#     def subtotal(self):
+#         return self.cantidad * self.precio_unitario
 
-    def __str__(self):
-        return f"Detalle de {self.producto.nombre} - Cantidad: {self.cantidad}"
+#     def __str__(self):
+#         return f"Detalle de {self.producto.nombre} - Cantidad: {self.cantidad}"
 
 
 

@@ -1,62 +1,65 @@
-{% extends "aplicacion/base_admin.html" %}
+{% extends "aplicacion/base_opciones_user.html" %}
 {% load static %}
-
 
 {% block contenido %}
 
-
-
-
-<div class="container-fluid mb-4 mt-4 ">
-  <h1 style="color: aliceblue;">Historial de pedidos</h1>
-
-</div>
-
-
-
-
-
-<!-- tabla con los productos -->
-<div class="table-responsive">
+<!-- Mostrar historial de pedidos -->
+{% if pedidos %}
+    <h2>Mi historial de pedidos</h2>
     <table class="table">
         <thead>
             <tr>
-                <th scope="col">Dirección</th>
-                <th scope="col">Productos</th>
-                <th scope="col">Total</th>
-                <th scope="col">Fecha</th>
-                <th scope="col">Hora</th>
-                <th scope="col">Funciones</th>
+                <th>Fecha de Pedido</th>
+                <th>ID Pedido  </th>
+                <th>Productos</th>
+                <th>Total</th>
+                <th>Estado</th>
+                <th>Nombre Completo</th>
+                <th>Email</th>
+                <th>Dirección</th>
+                <th>Departamento/Oficina/Piso</th>
             </tr>
         </thead>
         <tbody>
+            {% for pedido in pedidos %}
             <tr>
-                <td>Casa del cliffer</td>
-                <td>Caiman 1 litro</td>
-                <td>$9.990</td>
-                <td>12/04/2024</td>
-                <td>13:01:54</td>
+                <td>{{ pedido.fecha_pedido }}</td>
+                <td>{{ pedido.id }}</td>
                 <td>
-                  <button class="edit-button">Editar</button>
-                  <button class="delete-button">Borrar</button>
-                  
-              </td>
-
+                    <ul> 
+                        {% for productos in pedido.productos %}
+                            
+                            <li>
+                                 {{ productos.nombre }}<br>
+                                
+                                 {{productos.cantidad}} x ${{ productos.precio_unitario }}<br>
+                            </li>
+                            
+                        {% endfor %}
+                    </ul>
+                </td>
+                <td>${{ pedido.subtotal }}</td>
+                <td>                    <form action="{% url 'historialEnvio' %}" method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="pedido_id" value="{{ pedido.id }}">
+                    <select name="estado">
+                        {% for key, value in pedido.ESTADO_CHOICES %}
+                            <option value="{{ key }}" {% if pedido.estado == key %}selected{% endif %}>{{ value }}</option>
+                        {% endfor %}
+                    </select>
+                    <button type="submit" class="btn btn-primary btn-sm">Guardar</button>
+                </form></td>
+                <td>{{ pedido.nombre_completo }}</td>
+                <td>{{ pedido.email }}</td>
+                <td>{{ pedido.direccion }}</td>
+                <td>{{ pedido.departamento_oficina_piso }}</td>
             </tr>
-            <tr>
-                <td>Paicaví 3280</td>
-                <td>Caiman 1 litro</td>
-                <td>$9.990</td>
-                <td>12/04/2024</td>
-                <td>13:01:54</td>
-                <td>
-                  <button class="edit-button">Editar</button>
-                  <button class="delete-button">Borrar</button>
-                  
-              </td>
-
-            </tr>
+            {% endfor %}
         </tbody>
     </table>
-</div>
+    {% else %}
+    <p>No has realizado pedidos aún.</p>
+{% endif %}
+
+
 {% endblock contenido %}

@@ -1,20 +1,8 @@
-function soloNumeros(inputId) {
-    var input = document.getElementById(inputId);
-    if (!input) {
-        console.error("El elemento con el ID especificado no existe.");
-        return;
+document.addEventListener('DOMContentLoaded', function() {
+    var telefonoInput = document.getElementById('id_telefono');
+    if (telefonoInput) {
+        telefonoInput.addEventListener('input', function() {
+            this.value = this.value.replace(/[^0-9]/g, '').slice(0, 9);
+        });
     }
-
-    input.addEventListener('input', function() {
-        var valor = this.value;
-        var newValue = '';
-
-        for (var i = 0; i < valor.length; i++) {
-            if (/\d/.test(valor[i])) {
-                newValue += valor[i];
-            }
-        }
-
-        this.value = newValue;
-    });
-}
+});

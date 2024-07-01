@@ -67,6 +67,19 @@
     </div>
     
         {% if user.is_authenticated %}
+
+        {% if user.is_staff %}
+        <ul class="navbar-nav" style="display: flex; align-items: center;">
+            <li class="nav-item">
+                <a class="nav-link user" href="{% url "gestion_prod" %}" style="display: inline-block; padding: 0.5rem; border: 1px solid transparent; border-radius: 50%; margin-right: 10px;">
+                    <img src="{% static 'aplicacion/img/adm.png' %}" alt="" style="height: 2rem;">
+                </a>
+            </li>
+        </ul>
+        {% endif %}  
+
+
+
         <ul class="navbar-nav" style="display: flex; align-items: center;">
           <li class="nav-item">
               <a class="nav-link user" href="{% url "user" %}" style="display: inline-block; padding: 0.5rem; border: 1px solid transparent; border-radius: 50%; margin-right: 10px;">
@@ -81,14 +94,9 @@
       
         <li class="nav-item">
           <a class="nav-link user" href="{% url "historial_user" %}" style="display: inline-block; padding: 0.5rem; border: 1px solid transparent; border-radius: 50%; margin-right: 10px;">
-              <img src= "{% static "aplicacion/img/deliveryUser.png" %}"  alt="" style="height: 2rem; filter:  invert(1);"> 
+              <img src= "{% static "aplicacion/img/historial.png" %}"  alt="" style="height: 2rem;"> 
           </a>
       </li>
-
-
-
-
-
 
 
           <ul class="navbar-nav" style="display: flex; align-items: center;">
@@ -100,9 +108,8 @@
               <li class="nav-item">
                 <a class="nav-link user" href="{% url "cerrar_sesion" %}">Cerrar Sesion</a>
             </li>
-
             
-            
+        
             
       </ul>
         {% else %}
