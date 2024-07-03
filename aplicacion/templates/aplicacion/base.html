@@ -81,7 +81,7 @@
 
 
         <ul class="navbar-nav" style="display: flex; align-items: center;">
-          <li class="nav-item">
+          {% comment %} <li class="nav-item">
               <a class="nav-link user" href="{% url "user" %}" style="display: inline-block; padding: 0.5rem; border: 1px solid transparent; border-radius: 50%; margin-right: 10px;">
                   <img src= "{% static "aplicacion/img/dyler.png" %}"  alt="" style="height: 2rem; filter: brightness(0) invert(1);"> 
               </a>
@@ -90,7 +90,7 @@
             <a class="nav-link user" href="{% url "opciones" %}" style="display: inline-block; padding: 0.5rem; border: 1px solid transparent; border-radius: 50%; margin-right: 10px;">
                 <img src= "{% static "aplicacion/img/user.png" %}"  alt="" style="height: 2rem; filter: brightness(0) invert(1);"> 
             </a>
-        </li>
+        </li> {% endcomment %}
       
         <li class="nav-item">
           <a class="nav-link user" href="{% url "historial_user" %}" style="display: inline-block; padding: 0.5rem; border: 1px solid transparent; border-radius: 50%; margin-right: 10px;">
@@ -115,6 +115,8 @@
         {% else %}
         <ul class="navbar-nav" style="display: flex; align-items: center;">
         
+
+
           <li class="nav-item">
               <a class="nav-link user" href="{% url "login" %}">Ingresar</a>
           </li>

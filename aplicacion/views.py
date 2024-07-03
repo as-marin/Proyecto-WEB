@@ -36,14 +36,14 @@ def cerrar_sesion(request):
     logout(request)
     return redirect(to='index')
 
-# Create your views here.
+
 
 def index(request):
     producto = Producto.objects.all()
 
 
     datos = {
-        "producto": producto  # Pasar todos los productos al contexto
+        "producto": producto  
     }
 
     return render(request,'aplicacion/index.html',datos)
@@ -54,14 +54,13 @@ def cambiadireccion(request):
 def cambiatarjeta(request):
     return render(request,'aplicacion/cambiatarjeta.html')
 
-from django.shortcuts import get_object_or_404
 
 def carrito(request):
     carrito, created = Carrito.objects.get_or_create(usuario=request.user)
     items = carrito.items.all()
     total_carrito = carrito.total_carrito()
     
-    # Obtener los datos del usuario
+    
     usuario = request.user
     nombre_completo = f"{usuario.nombre} {usuario.apellido}"
     email = usuario.email
@@ -69,7 +68,7 @@ def carrito(request):
 
     if request.method == 'POST':
         if 'proceder_pago' in request.POST:
-            # Serializar los productos del carrito
+            
             productos_pedido = []
             for item in items:
                 producto = {
@@ -80,10 +79,10 @@ def carrito(request):
                 }
                 productos_pedido.append(producto)
             
-            # Convertir la lista de productos a JSON
+            # convierte la lista de productos a un JSON
             productos_json = json.dumps(productos_pedido)
 
-            # Guardar el pedido
+            
             pedido = Pedido.objects.create(
                 usuario=request.user,
                 productos=productos_json,
@@ -94,13 +93,13 @@ def carrito(request):
                 departamento_oficina_piso=request.POST.get('dept'),
             )
 
-            # Limpiar el carrito después de guardar el pedido
+            
             for item in carrito.items.all():
                 item.delete()
             messages.success(request, '¡Pedido realizado con éxito!')
 
-            # Redireccionar a una página de confirmación o a donde desees
-            return redirect('historial_user')  # Ajusta esto a tu URL de confirmación
+            
+            return redirect('historial_user')  
 
         item_id = request.POST.get('item_id')
         if 'accion' in request.POST:
@@ -123,7 +122,7 @@ def carrito(request):
             item_id = request.POST.get('eliminar_item')
             item = get_object_or_404(ItemCarrito, id=item_id)
             item.delete()
-            # Redireccionar a la vista del carrito después de eliminar el item
+            
             return redirect('carrito')
 
         total_carrito = carrito.total_carrito()
@@ -145,7 +144,7 @@ def cervezas(request):
 
 
     datos = {
-        "producto": producto  # Pasar todos los productos al contexto
+        "producto": producto  
     }  
     return render(request,'aplicacion/cervezas.html',datos)
 
@@ -157,8 +156,8 @@ def crearu(request):
         form = UsuarioCreationForm(request.POST)
         if form.is_valid():
             user = form.save()
-            # Aquí puedes hacer cualquier acción adicional después de guardar el usuario
-            return redirect('login')  # Reemplaza con la ruta a donde redirigir
+            
+            return redirect('login')  
     else:
         form = UsuarioCreationForm()
     return render(request, 'aplicacion/crearu.html', {'form': form})
@@ -170,7 +169,7 @@ def destilados(request):
 
 
     datos = {
-        "producto": producto  # Pasar todos los productos al contexto
+        "producto": producto  
     }
     return render(request,'aplicacion/destilados.html',datos)
 
@@ -179,7 +178,7 @@ def espumantes(request):
 
 
     datos = {
-        "producto": producto  # Pasar todos los productos al contexto
+        "producto": producto  
     }
     return render(request,'aplicacion/espumantes.html',datos)
 
@@ -187,14 +186,14 @@ def espumantes(request):
 @staff_required
 def gestionusuario(request):
 
-    # Obtener todos los productos existentes para mostrarlos
+    
     usuario = Usuario.objects.all()
 
     if request.method == "POST":
         form = UsuarioCreationForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return redirect('gestionusuario')  # Redirigir a la misma página después de guardar el producto
+            return redirect('gestionusuario')  
     else:
         form = UsuarioCreationForm()
 
@@ -278,7 +277,7 @@ def licores(request):
 
 
     datos = {
-        "producto": producto  # Pasar todos los productos al contexto
+        "producto": producto  
     }
     return render(request,'aplicacion/licores.html',datos)
 
@@ -296,12 +295,14 @@ def user(request):
 def verificacion(request):
     return render(request,'aplicacion/verificacion.html')
 
-def verproducto(request,id):
 
-    producto=get_object_or_404(Producto,id=id)
-
+def verproducto(request, id):
+    producto = get_object_or_404(Producto, id=id)
 
     if request.method == 'POST':
+        if not request.user.is_authenticated:
+            return redirect('login')  
+
         carrito, created = Carrito.objects.get_or_create(usuario=request.user)
         item_carrito, item_created = ItemCarrito.objects.get_or_create(carrito=carrito, producto=producto)
         if not item_created:
@@ -309,21 +310,19 @@ def verproducto(request,id):
             item_carrito.save()
 
         return redirect('carrito')
-    
 
-
-    datos={
-        "producto":producto
+    datos = {
+        "producto": producto
     }
 
-    return render(request,'aplicacion/verproducto.html',datos)
+    return render(request, 'aplicacion/verproducto.html', datos)
 
 def vinos(request):
     producto = Producto.objects.filter(tipo='Vino')
 
 
     datos = {
-        "producto": producto  # Pasar todos los productos al contexto
+        "producto": producto  
     }
     return render(request,'aplicacion/vinos.html',datos)
 
@@ -332,26 +331,26 @@ def whiskies(request):
 
 
     datos = {
-        "producto": producto  # Pasar todos los productos al contexto
+        "producto": producto  
     }
     return render(request,'aplicacion/whiskies.html',datos)
 
 @staff_required
 def gestion_prod(request,):
-    # Obtener todos los productos existentes para mostrarlos
+    
     producto = Producto.objects.all()
 
     if request.method == "POST":
         form = ProductoForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return redirect('gestion_prod')  # Redirigir a la misma página después de guardar el producto
+            return redirect('gestion_prod')  
     else:
         form = ProductoForm()
 
     datos = {
         "form": form,
-        "producto": producto  # Pasar todos los productos al contexto
+        "producto": producto  
     }
 
     return render(request, 'aplicacion/gestion_prod.html', datos)

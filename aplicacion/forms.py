@@ -46,7 +46,7 @@ class UsuarioCreationForm(UserCreationForm):
             'maxlength': '9',
             'pattern': '[0-9]*',
             'title': 'Solo se permiten números y hasta 9 caracteres.',
-            'id': 'id_telefono'  # Agregando el id aquí
+            'id': 'id_telefono' 
         })
     )
 
