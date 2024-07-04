@@ -187,7 +187,7 @@ def espumantes(request):
 def gestionusuario(request):
 
     
-    usuario = Usuario.objects.all()
+    usuario = Usuario.objects.filter(is_staff=False)
 
     if request.method == "POST":
         form = UsuarioCreationForm(request.POST, request.FILES)
