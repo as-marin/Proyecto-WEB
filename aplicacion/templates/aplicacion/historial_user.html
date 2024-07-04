@@ -1,4 +1,4 @@
-{% extends "aplicacion/base.html" %}
+{% extends "aplicacion/base_no_footer.html" %}
 {% load static %}
 
 {% block contenido %}
@@ -47,7 +47,7 @@
         </tbody>
     </table>
 {% else %}
-    <p>No has realizado pedidos aún.</p>
+    {% comment %} <p>No has realizado pedidos aún.</p> {% endcomment %}
 {% endif %}
 
 
