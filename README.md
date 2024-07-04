@@ -14,6 +14,5 @@ __python manage.py shell__
     apellido='Staff',
     telefono='987654321',
     fecha_nacimiento=timezone.now(),
-    password='staffpw'
- )
+    password='staffpw')
 ```
