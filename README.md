@@ -6,7 +6,7 @@ __python manage.py shell__
   from aplicacion.models import Usuario
   from django.utils import timezone
 
-  Crear un usuario staff
+  
  Usuario.objects.create_staff_user(
   email='staff@example.com',
     rut='12345678-9',
