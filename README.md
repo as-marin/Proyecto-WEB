@@ -1,3 +1,12 @@
+#### Cuenta de usuario para testeo
+##### user@user.com
+##### testuser
+
+#### Cuenta de Staff para testeo
+##### staff@example.com
+##### staffpw
+
+
 ### Hacer un usuario staff
 
 __python manage.py shell__
