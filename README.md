@@ -1,3 +1,5 @@
+## Viene con una base de datos lista para visualizar las funciones de la pagina.
+
 #### Cuenta de usuario para testeo
 ##### user@user.com
 ##### testuser
